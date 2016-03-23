@@ -1,0 +1,12 @@
+mixin columns(component)
+  .columns
+    if component.children
+      each child in component.children
+        +t(child.name, child)
+
+mixin column(component)
+  .column
+    if component.children
+      each child in component.children
+        if jade_mixins[child.name]
+          +t(child.name, child)

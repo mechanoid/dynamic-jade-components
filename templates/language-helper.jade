@@ -1,0 +1,10 @@
+mixin t(component, context)
+  if jade_mixins[component+"_"+LOCALE]
+    //- called e.g if a template for a specific region is available, like fr_FR
+    +#{component+"_"+LOCALE}(context)
+  else if (jade_mixins[component+"_"+LANGUAGE])
+    //- called e.g if at least a template for a specific language is available, like fr
+    +#{component+"_"+LANGUAGE}(context)
+  else
+    //- FALLBACK
+    +#{component}(context)

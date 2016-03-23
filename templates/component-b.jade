@@ -1,0 +1,20 @@
+mixin component-b(component)
+  .component-b
+    h1 Bürgermeister
+    p= component.data.text
+
+mixin component-b_fr(component)
+  .component-b
+    h1 maire
+    p= component.data.text
+
+mixin component-b_fr_BE(component)
+  .component-b
+    h1 bourgmestre
+    
+    ul
+      li some points below here
+      li some points below here
+      li some points below here
+    
+    p= component.data.text

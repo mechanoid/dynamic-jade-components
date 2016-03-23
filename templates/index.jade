@@ -1,0 +1,37 @@
+include language-helper
+include columns
+include component-a
+include component-b
+
+
+-
+  var components = [
+    {
+      "name": "columns",
+      "data": {},
+      "children": [
+        {
+          "name": "column",
+          "children": [
+            {
+              "name": "component-a",
+              "data": { "text": "COLUMN 1"}
+            }
+          ]
+        },
+        {
+          "name": "column",
+          "children": [
+            {
+              "name": "component-b",
+              "data": { "text": "COLUMN 2"}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  
+  
+for component in components
+  +t(component.name, component)
